@@ -1,6 +1,6 @@
 <?php
-function rad_labs_category_colors(){
-    if ( !class_exists( 'RadLabs_Category_Colors' ) )
+function rad_labs_category_colors_extended(){
+    if ( !class_exists( 'RadLabs_Category_Colors_Extended' ) )
         return;
 
     $meta_sections = array();
@@ -29,4 +29,4 @@ function rad_labs_category_colors(){
     }
 }
 
-add_action( 'admin_init', 'rad_labs_category_colors' );
+add_action( 'admin_init', 'rad_labs_category_colors_extended' );
