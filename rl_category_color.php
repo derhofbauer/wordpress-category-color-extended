@@ -9,7 +9,7 @@ Author URI: http://www.radlabs.biz/, http://hofbauer.rocks
 License: GPL2+
 */
 
-class RadLabs_Category_Colors{
+class RadLabs_Category_Colors_Extended{
     protected $_meta;
     protected $_taxonomies;
     protected $_fields;
