@@ -197,9 +197,15 @@ class RadLabs_Category_Colors_Extended{
 require_once('fields.php');
 
 function rl_color_extended($catid){
-    $meta = get_option('rl_category_meta');
-    $meta = isset($meta[$catid]) ? $meta[$catid] : array();
-    $yt_cat_color['bg'] = $meta['rl_cat_color_bg'];
-    $yt_cat_color['fg'] = $meta['rl_cat_color_fg'];
-    return $yt_cat_color;
+    $meta = get_option('rl_category_extended_meta');
+    var_dump($meta);
+    if (array_key_exists($catid, $meta)) {
+        $yt_cat_color['bg'] = $meta[$catid]['rl_category_color_bg'];
+        $yt_cat_color['fg'] = $meta[$catid]['rl_category_color_fg'];
+        return $yt_cat_color;
+    } else {
+        return "";
+    }
 }
+
+?>
