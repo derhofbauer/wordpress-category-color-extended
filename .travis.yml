@@ -16,4 +16,3 @@ deploy:
   file: category-color-extended.zip
   on:
     branch: release
-    tags: true
