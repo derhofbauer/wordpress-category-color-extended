@@ -1,12 +1,19 @@
 language: php
 php:
-  - "5.4"
-  - "5.5"
-  - "5.6"
-  - "7.0"
-  - hhvm
+- '5.4'
+- '5.5'
+- '5.6'
+- '7.0'
 
-script: find -L . -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l
+script:
+  - find -L . -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l
+  - bash build.sh
 
-script: build.sh
-script: deploy.sh
+deploy:
+  provider: releases
+  api_key:
+    secure: hP8Dy4KJKmPUNWrJsQ7HOZZzX9zY9R7teCjesuFOz5fKAqYwR7Zqu2mrJ9Ojq4ZnnN0vNHQJvFxwiIagVSlyEOREyDmgRhZhjAVHRAucbYoCpiTqNx0d7yo068Ag7G5kDDQvWqPmBQ8WFvhAvg5cgUGWIYrmF4WO+3+/Mov/TithRW8LR3REo4CTi2K9L5zVUa8NKubk7ZY9yzfVpw4nguXoN5EWLSzBm7GqI+nzyWVK2R2ctS1NuxSFuBA4z77xXXZ+r1f5wu4WjqL1ZayVwb61O7PPXbBQI+oJRBlY8952eAKNbT9IcQgO36LsKxfyHD6GVBrbjQvHX+TxRnBXeMHU+/526tTkkbgEEbPw6nUT1uzWV5pfjWETL6CPe8dWk/282c2ndjiAa3cCprBBCf5gxh//XgYr617DF7FNiop84wcR90vQw8yYTwqCn/M51iRX+rb3BOR2ItKZnglN7ngajoYGJmPZi21ssmwtBN48yPNzWy2mPSs+FCgfGaAzJSzOOx4HYB3QJqL9UdDW1zV3n7+oMzXRQwVxkFeoewLk4iSvsE5Lk4htw2Tfs/qSEXVbxkwYzB01vQzAotq+5gv71xQgW7wWyjQ+woSsXBIeMWitz1NYZOxO7KcIv474EY8mQpMequ0bwONXO4eXYGM1zWlNsVgtb284diPqBxE=
+  file: category-color-extended.zip
+  on:
+    branch: release
+    tags: true
