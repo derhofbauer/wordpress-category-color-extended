@@ -19,12 +19,10 @@ Please refer to the official documentation: https://codex.wordpress.org/Managing
 
 ```php
 <?php
-    $category = get_the_category();
-    $the_category_id = $category[0]->cat_ID;
-
     if(function_exists('rl_color_extended')){
-        $rl_category_color_fg = rl_color_extended($the_category_id)['fg'];
-        $rl_category_color_bg = rl_color_extended($the_category_id)['bg'];
+        $rl_category_color_fg   = rl_color_extended( $category_id )['rl_category_color_fg'];
+        $rl_category_color_bg   = rl_color_extended( $category_id )['rl_category_color_bg'];
+        $rl_category_color_text = rl_color_extended( $category_id )['rl_category_color_text'];
     }
 ?>
 ```
