@@ -199,9 +199,7 @@ require_once('fields.php');
 function rl_color_extended($catid){
     $meta = get_option('rl_category_extended_meta');
     if (array_key_exists($catid, $meta)) {
-        $yt_cat_color['bg'] = $meta[$catid]['rl_category_color_bg'];
-        $yt_cat_color['fg'] = $meta[$catid]['rl_category_color_fg'];
-        return $yt_cat_color;
+        return $meta[$catid];
     } else {
         return "";
     }
