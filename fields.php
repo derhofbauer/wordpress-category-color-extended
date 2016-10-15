@@ -20,6 +20,11 @@ function rad_labs_category_colors_extended(){
                     'id'   => 'rl_category_color_fg',
                     'type' => 'color',
                     ),
+                array(
+                    'name' => 'Text On Accent Color',
+                    'id'   => 'rl_category_color_text',
+                    'type' => 'color',
+                    ),
                 ),
             );
 
