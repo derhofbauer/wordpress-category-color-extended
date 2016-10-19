@@ -12,16 +12,19 @@ function rad_labs_category_colors_extended(){
             'fields'     => array(
                 array(
                     'name' => 'Background Color',
+                    'desc' => 'Color for page background',
                     'id'   => 'rl_category_color_bg',
                     'type' => 'color',
                     ),
                 array(
                     'name' => 'Foreground Color',
+                    'desc' => 'Color for page accents',
                     'id'   => 'rl_category_color_fg',
                     'type' => 'color',
                     ),
                 array(
                     'name' => 'Text On Accent Color',
+                    'desc' => 'Color for text on accents (e. g. button text)',
                     'id'   => 'rl_category_color_text',
                     'type' => 'color',
                     ),
