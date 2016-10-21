@@ -9,7 +9,7 @@ Author URI: http://www.radlabs.biz/, http://hofbauer.rocks
 License: GPL2+
 */
 
-class RadLabs_Category_Colors_Extended{
+class Category_Colors_Extended{
     protected $_meta;
     protected $_taxonomies;
     protected $_fields;
@@ -31,14 +31,12 @@ class RadLabs_Category_Colors_Extended{
      ********************************/
     function load_edit_page(){
         $screen = get_current_screen();
-        if(
-            'edit-tags' != $screen->base
-            || empty( $_GET['action'] ) || 'edit' != $_GET['action']
-            || !in_array( $screen->taxonomy, $this->_taxonomies )
-        ){
+        if ('edit-tags' != $screen->base
+           || empty( $_GET['action'] )
+           || 'edit' != $_GET['action']
+           || !in_array( $screen->taxonomy, $this->_taxonomies )) {
             return;
         }
-
         add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
         add_action( 'admin_head', array( $this, 'output_css' ) );
         add_action( 'admin_footer', array( $this, 'output_js' ), 100 );
@@ -98,10 +96,9 @@ class RadLabs_Category_Colors_Extended{
         // get meta fields for current term
         $metas = isset( $metas[$tag->term_id] ) ? $metas[$tag->term_id] : array();
 
-        wp_nonce_field( basename( __FILE__ ), 'radlabs_taxonomy_meta_nonce' );
+        wp_nonce_field( basename( __FILE__ ), 'taxonomy_meta_nonce' );
 
-        echo "<h3>{$this->_meta['title']}</h3>
-            <table class='form-table'>";
+        echo "<h3>{$this->_meta['title']}</h3><table class='form-table'>";
         foreach ( $this->_fields as $field ) {
             echo '<tr>';
 
@@ -177,7 +174,7 @@ class RadLabs_Category_Colors_Extended{
         // Default values for meta box
         $this->_meta = array_merge( array(
             'taxonomies' => array( 'category', 'post_tag' )
-        ), $this->_meta );
+            ), $this->_meta );
 
         $this->_taxonomies = $this->_meta['taxonomies'];
         $this->_fields = $this->_meta['fields'];
@@ -191,18 +188,23 @@ class RadLabs_Category_Colors_Extended{
         }
         return false;
     }
+
+    function get_fields( $catid ) {
+        $meta = get_option('category_color_extended_meta');
+        if (array_key_exists($catid, $meta)) {
+            return $meta[$catid];
+        } else {
+            return "";
+        }
+    }
 }
 
-//Load Texonomy metaboxes
-require_once('fields.php');
+//Load Taxonomy metaboxes
+require_once('default_fields.php');
 
-function rl_color_extended($catid){
-    $meta = get_option('rl_category_extended_meta');
-    if (array_key_exists($catid, $meta)) {
-        return $meta[$catid];
-    } else {
-        return "";
-    }
+// provide global function for fetching categories
+function category_color_extended($catid){
+    return Category_Colors_Extended::get_fields($catid);
 }
 
 ?>
