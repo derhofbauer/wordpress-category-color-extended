@@ -3,11 +3,19 @@
 Plugin Name: Category Color Extended
 Plugin URI: https://wordpress.org/plugins/category-color-extended/
 Description: Easily set a custom color per Post Category and use the colors in your Wordpress templates to spice up your theme. Based upon https://wordpress.org/plugins/category-color/
-Version: 2.0
-Author: Zayed Baloch, Naeem Nur, Alexander Hofbauer
-Author URI: http://www.radlabs.biz/, http://hofbauer.rocks
+Version: 1.0
+Author: Alexander Hofbauer
+Author URI: http://hofbauer.rocks
 License: GPL2+
+
+Text Domain: category-color-extended
+Domain Path: ./i18n/
 */
+
+function category_color_extended_load_textdomain() {
+    load_plugin_textdomain( 'category-color-extended', FALSE, basename( dirname( __FILE__ ) ) . '/i18n/' );
+}
+add_action( 'plugins_loaded', 'category_color_extended_load_textdomain' );
 
 class Category_Colors_Extended{
     protected $_meta;

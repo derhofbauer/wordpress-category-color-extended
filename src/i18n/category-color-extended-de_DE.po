@@ -1,0 +1,49 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: category-color-extended\n"
+"POT-Creation-Date: 2016-10-21 12:37+0200\n"
+"PO-Revision-Date: 2016-10-21 12:41+0200\n"
+"Last-Translator: Alexander Hofbauer <hofbauer.alexander@gmail.com>\n"
+"Language-Team: Alexander Hofbauer <hofbauer.alexander@gmail.com>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: category_color_extended.php\n"
+"X-Poedit-SearchPath-1: default_fields.php\n"
+
+#: default_fields.php:9
+msgid "Select Category Color"
+msgstr "Kategorie Farbe auswählen"
+
+#: default_fields.php:14
+msgid "Background Color"
+msgstr "Hintergrundfarbe"
+
+#: default_fields.php:15
+msgid "Color for page background"
+msgstr "Farbe für den Seitenhintergrund"
+
+#: default_fields.php:20
+msgid "Foreground Color"
+msgstr "Fordergrundfarbe"
+
+#: default_fields.php:21
+msgid "Color for page accents"
+msgstr "Farbe für Akzente auf der Seite"
+
+#: default_fields.php:26
+msgid "Text On Accent Color"
+msgstr "Textfarbe"
+
+#: default_fields.php:27
+msgid "Color for text on accents (e. g. button text)"
+msgstr "Farbe für Text auf Akzenten (z. B. Button-Text)"
+
+#: category_color_extended.php:5
+msgid "Easily set a custom color per Post Category and use the colors in your Wordpress templates to spice up your theme. Based upon https://wordpress.org/plugins/category-color/"
+msgstr "Fügen Sie für jede Beitragskategorie Farben hinzu, die Sie in Ihrem Design verwenden können. Basiert auf https://wordpress.org/plugins/category-color/"
