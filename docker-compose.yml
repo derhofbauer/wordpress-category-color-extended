@@ -7,7 +7,7 @@ services:
     volumes:
       - './src/:/var/www/html/wp-content/plugins/category-color-extended'
     ports:
-      - "localhost:8080:80"
+      - "localhost:8085:80"
     depends_on:
       - wordpressdb
     links:
