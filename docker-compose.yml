@@ -5,9 +5,10 @@ services:
   wordpress:
     image: wordpress
     volumes:
+      - './docker/:/docker'
       - './src/:/var/www/html/wp-content/plugins/category-color-extended'
     ports:
-      - "localhost:8080:80"
+      - "localhost:8085:80"
     depends_on:
       - wordpressdb
     links:
@@ -16,6 +17,7 @@ services:
       DEBUG: 'true'
       WORDPRESS_DB_PASSWORD: 'password'
       WORDPRESS_DB_HOST: wordpressdb:3306
+    entrypoint: ["/docker/setup/wordpress/wordpress-setup.sh"]
 
   wordpressdb:
     image: mariadb
@@ -27,7 +29,7 @@ services:
       MYSQL_USER: 'wordpress'
       MYSQL_PASSWORD: 'password'
     volumes:
-      - './docker/persistence/wordpressdb/:/var/lib/mysql'
+      - './docker/setup/wordpressdb:/docker-entrypoint-initdb.d'
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
