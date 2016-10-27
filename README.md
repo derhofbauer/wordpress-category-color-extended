@@ -20,9 +20,9 @@ Please refer to the official documentation: https://codex.wordpress.org/Managing
 ```php
 <?php
     if(function_exists('category_color_extended')){
-        $rl_category_color_fg   = category_color_extended( $category_id )['rl_category_color_fg'];
-        $rl_category_color_bg   = category_color_extended( $category_id )['rl_category_color_bg'];
-        $rl_category_color_text = category_color_extended( $category_id )['rl_category_color_text'];
+        $rl_category_color_fg   = category_color_extended( $category_id )['category_color_fg'];
+        $rl_category_color_bg   = category_color_extended( $category_id )['category_color_bg'];
+        $rl_category_color_text = category_color_extended( $category_id )['category_color_text'];
     }
 ?>
 ```
