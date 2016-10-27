@@ -19,12 +19,12 @@ Please refer to the official documentation: https://codex.wordpress.org/Managing
 
 ```php
 <?php
-    if(function_exists('rl_color_extended')){
-        $rl_category_color_fg   = rl_color_extended( $category_id )['rl_category_color_fg'];
-        $rl_category_color_bg   = rl_color_extended( $category_id )['rl_category_color_bg'];
-        $rl_category_color_text = rl_color_extended( $category_id )['rl_category_color_text'];
+    if(function_exists('category_color_extended')){
+        $rl_category_color_fg   = category_color_extended( $category_id )['rl_category_color_fg'];
+        $rl_category_color_bg   = category_color_extended( $category_id )['rl_category_color_bg'];
+        $rl_category_color_text = category_color_extended( $category_id )['rl_category_color_text'];
     }
 ?>
 ```
 
-Now you can use the colors in your template in an inline stylesheet. The variables `$rl_category_color_fg` and `$rl_category_color_bg` can be used in yout template.
+Now you can use the colors in your template in an inline stylesheet.
