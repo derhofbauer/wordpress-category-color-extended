@@ -16,3 +16,8 @@ deploy:
   file: category-color-extended.zip
   on:
     branch: release
+
+notifications:
+  slack:
+    rooms:
+      - egg2studios:kbO6Z50sTXdlwz2zidggyOkL#travis-ci
