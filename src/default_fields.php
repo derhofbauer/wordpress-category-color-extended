@@ -1,5 +1,8 @@
 <?php
 
+function CategoryColorsExtended(){
+    if (class_exists( 'CategoryColorsExtended' )) {
+
 function categoryColorsExtended()
 {
     if (class_exists('categoryColorsExtended')) {
@@ -32,10 +35,13 @@ function categoryColorsExtended()
                 ],
             ];
 
-        foreach ($metaSections as $metaSection) {
-            new categoryColorsExtended($metaSection);
+        foreach ($metaSections as $metaSection){
+            new CategoryColorsExtended( $metaSection );
         }
     }
 }
 
-add_action('admin_init', 'categoryColorsExtended');
+
+add_action( 'admin_init', 'CategoryColorsExtended' );
+
+?>
