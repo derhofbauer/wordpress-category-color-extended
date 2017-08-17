@@ -2,10 +2,6 @@
 
 function CategoryColorsExtended(){
     if (class_exists( 'CategoryColorsExtended' )) {
-
-function categoryColorsExtended()
-{
-    if (class_exists('categoryColorsExtended')) {
         $metaSections = [];
 
         // Color Meta Box
