@@ -1,11 +1,11 @@
 <?php
-function category_colors_extended(){
-    if (class_exists( 'Category_Colors_Extended' )) {
+function categoryColorsExtended(){
+    if (class_exists( 'categoryColorsExtended' )) {
 
-        $meta_sections = array();
+        $metaSections = array();
 
          // Color Meta Box
-        $meta_sections[] = array(
+        $metaSections[] = array(
             'title'      => __('Select Category Color', 'category-color-extended'),
             'taxonomies' => array('category'),
             'id'         => 'category_color_extended_meta',
@@ -31,12 +31,12 @@ function category_colors_extended(){
                 ),
             );
 
-        foreach ($meta_sections as $meta_section){
-            new Category_Colors_Extended( $meta_section );
+        foreach ($metaSections as $metaSection){
+            new categoryColorsExtended( $metaSection );
         }
     }
 }
 
-add_action( 'admin_init', 'category_colors_extended' );
+add_action( 'admin_init', 'categoryColorsExtended' );
 
 ?>
