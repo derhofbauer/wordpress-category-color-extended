@@ -2,6 +2,7 @@ category-color-extended
 =======================
 
 ![StyleCI](https://styleci.io/repos/70521969/shield)
+[![Build Status](https://travis-ci.org/derhofbauer/category-color-extended.svg?branch=master)](https://travis-ci.org/derhofbauer/category-color-extended)
 
 Extending WordPress Plugin "Category Color" (https://wordpress.org/plugins/category-color/) with an additional color field.
 
