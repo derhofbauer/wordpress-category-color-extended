@@ -2,7 +2,6 @@ category-color-extended
 =======================
 
 ![StyleCI](https://styleci.io/repos/70521969/shield)
-![CodeFactor](https://www.codefactor.io/repository/github/derhofbauer/category-color-extended/badge)
 
 Extending WordPress Plugin "Category Color" (https://wordpress.org/plugins/category-color/) with an additional color field.
 
