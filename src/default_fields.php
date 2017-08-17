@@ -1,7 +1,8 @@
 <?php
 
-function CategoryColorsExtended(){
-    if (class_exists( 'CategoryColorsExtended' )) {
+function CategoryColorsExtended()
+{
+    if (class_exists('CategoryColorsExtended')) {
         $metaSections = [];
 
         // Color Meta Box
@@ -31,13 +32,10 @@ function CategoryColorsExtended(){
                 ],
             ];
 
-        foreach ($metaSections as $metaSection){
-            new CategoryColorsExtended( $metaSection );
+        foreach ($metaSections as $metaSection) {
+            new CategoryColorsExtended($metaSection);
         }
     }
 }
 
-
-add_action( 'admin_init', 'CategoryColorsExtended' );
-
-?>
+add_action('admin_init', 'CategoryColorsExtended');

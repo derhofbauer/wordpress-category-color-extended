@@ -18,7 +18,8 @@ function categoryColorExtendedLoadTextdomain()
 }
 add_action('plugins_loaded', 'categoryColorExtendedLoadTextdomain');
 
-class CategoryColorsExtended{
+class CategoryColorsExtended
+{
     protected $meta;
     protected $taxonomies;
     protected $fields;
@@ -240,8 +241,7 @@ class CategoryColorsExtended{
 require_once 'default_fields.php';
 
 // provide global function for fetching categories
-function categoryColorExtended($catid){
+function categoryColorExtended($catid)
+{
     return CategoryColorsExtended::getFields($catid);
 }
-
-?>
