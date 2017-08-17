@@ -1,0 +1,11 @@
+{
+	"name": "derhofbauer/category-color-extended",
+	"description": "Add Colors to your WordPress Categories",
+	"keywords": ["category", "colors"],
+	"homepage": "http://hofbauer.rocks",
+	"type": "wordpress-plugin",
+	"require": {
+		"php": ">=5.3",
+		"composer/installers": "v1.2.0"
+	}
+}

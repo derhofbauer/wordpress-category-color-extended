@@ -4,11 +4,9 @@ php:
 - '5.5'
 - '5.6'
 - '7.0'
-
 script:
-  - find -L . -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l
-  - bash build.sh
-
+- find -L . -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l
+- bash build.sh
 deploy:
   provider: releases
   api_key:
@@ -16,3 +14,6 @@ deploy:
   file: category-color-extended.zip
   on:
     branch: release
+notifications:
+  slack:
+    secure: bDBL/4zJ3mlaIvkxYt+2qTO60UCzjJFpcFPZycKX90/qYx1wNyu0PyaJDZo6TegbZlWs4NY96STR7RylcioQ/HZvXagJ77i63IIIunGMQ7Zq4V0n4btoF4aIHAvN+gFQrt4WFQmZzyIlyw9I3LDvd0JmEojwLrGJZQVXO2VwGtQQufV9IuhDdoiPWY9kVj/bmaH3Cv8/066LzNAeDrQXs5jG/E0rC4YmFNvnHhgsk8GKUIGIGTa83rNIGhIwdztz3kg1LEuJbZVxI69FQndKwBznFA0244787Jg4BnHRuDkZNFn+K8Nhllgi3qa7JBI7ol0tG5JM9v/AmqLpf5tHgZOuumpny5v6ChkMrQ8WLWmJqab4315CbcCU29a/goI+oUK6KUXxo3SfOfYRolauDauQoRuHW5hdaJk+J5X1DhWwI8dGFQkYiTws3LzMzyDhyuNqQ78+pWyEU7mW1IbxDBb6tF6bydaU1IWi+NUvX6OXXGeVVNgSFpIF+3SbLMwVOvEenye7hxU70i6Ef3IJc7AOsG5ikZJczHICkubZVcY7EVDZ4C5gX++YptQu3V93G2h4lH0+eOY7HdGAbIOt/VIjqL94qSmbWc9n/UezXc/R79KG8la7KYZSyijKydmI4uV0DVu/lSKFFGZUECX1qpsO6n6TRfGmxMjMoa14a2Q=
