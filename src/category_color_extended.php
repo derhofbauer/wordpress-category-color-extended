@@ -243,3 +243,5 @@ require_once 'default_fields.php';
 function categoryColorExtended($catid){
     return CategoryColorsExtended::getFields($catid);
 }
+
+?>
