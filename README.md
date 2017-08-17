@@ -6,6 +6,7 @@ category-color-extended
 [![Build Status](https://travis-ci.org/derhofbauer/category-color-extended.svg?branch=master)](https://travis-ci.org/derhofbauer/category-color-extended)
 [![BCH compliance](https://bettercodehub.com/edge/badge/derhofbauer/category-color-extended?branch=master)](https://bettercodehub.com/)
 [![Issue Count](https://codeclimate.com/github/derhofbauer/category-color-extended/badges/issue_count.svg)](hhttps://codeclimate.com/github/derhofbauer/category-color-extended/)
+[![CodeFactor](https://www.codefactor.io/repository/github/derhofbauer/fesearch/badge)](https://www.codefactor.io/repository/github/derhofbauer/fesearch)
 
 Extending WordPress Plugin "Category Color" (https://wordpress.org/plugins/category-color/) with an additional color field.
 
