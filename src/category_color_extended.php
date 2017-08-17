@@ -131,7 +131,7 @@ class categoryColorsExtended{
         echo $field['desc'] ? "<br><span class='description'>{$field['desc']}</span></td>" : '</td>';
     }
 
-    function show_field_color( $field, $meta ){
+    function showFieldColor( $field, $meta ){
         if ( empty( $meta ) ) $meta = '#';
         $this->showFieldBegin( $field, $meta );
         echo "<input type='text' name='{$field['id']}' id='{$field['id']}' value='$meta' class='color'>";
